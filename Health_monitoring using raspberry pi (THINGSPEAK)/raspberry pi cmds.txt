@@ -1,0 +1,40 @@
+step - 1: Update raspberry pi, using this cmds,
+
+	1.sudo apt-get update
+	2.sudo apt-get upgrade
+
+step - 2: Install Ubidots Python Library
+
+	1.sudo apt-get install python-setuptools
+	2.sudo easy_install pip
+	3.sudo pip install ubidots
+
+step - 3: Install pulse sensor Library
+	1.Enable I2C . using cmd
+		sudo raspi-config
+
+	2.Go to Advance Options enable I2C. 
+	3.sudo Reboot
+	4.sudo pip install adafruit-ads1x15
+
+sttep - 4: Install DHT11 library using cmd 
+
+	1.we need to update our Pi and install some dependencies using these commands
+		sudo apt-get update
+		sudo apt-get install build-essential python-dev
+
+	2.The sensor library itself is on GitHub and we will download it from there onto our Pi
+	using the following command
+		git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+
+	4.This command downloads the library and saves it in a subdirectory. Now, go into this
+	subdirectory using the following command
+		cd Adafruit_Python_DHT
+
+	5.you need to actually install the sensor library using the following command
+		sudo python setup.py install
+	
+step - 5:
+	1.Go to path of python code and Run the code by using cmd
+	
+	1.sudo python code_name.py
